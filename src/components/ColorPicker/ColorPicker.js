@@ -4,12 +4,13 @@ import reactCSS from 'reactcss';
 import './ColorPicker.css';
 
 
-export default function ColorPicker() {
-    const [color, setColor] = useState({ r: '0', g: '0', b: '0', a: '1'});
+export default function ColorPicker({getColor}) {
+
+    const [color, setColor] = useState({ r: '255', g: '255', b: '255', a: '1'});
 
     const [displayColorPicker, setDisplayColorPicker] = useState(false);
 
-    // Toggles 
+    // Toggles ChromePicker to the screen
     const handleClick = () => {
         setDisplayColorPicker(!displayColorPicker);
     };
@@ -19,6 +20,7 @@ export default function ColorPicker() {
     };
 
     const handleChange = (color) => {
+        getColor(color.hex);
         setColor(color.rgb);
     };
 
