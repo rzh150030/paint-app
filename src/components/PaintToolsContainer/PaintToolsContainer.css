@@ -1,0 +1,6 @@
+.PaintToolsContainer{
+    margin: 0px;
+    min-height: 90vh;
+    max-width: 17%;
+    border: 5px solid rgb(47, 47, 47);
+}
