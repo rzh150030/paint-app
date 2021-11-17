@@ -1,9 +1,10 @@
 import './App.css';
+import {PaintCanvas} from "./components/PaintCanvas/PaintCanvas.js";
 
 function App() {
   return (
     <div className="App">
-       <h2>EEEEEEEEEE</h2>
+      <PaintCanvas />
     </div>
   );
 }
