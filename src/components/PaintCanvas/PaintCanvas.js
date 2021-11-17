@@ -13,6 +13,8 @@ export const PaintCanvas = () => {
     }, [])
 
     return (
-        <canvas ref={canvasRef} />
+        <div id="sketch">
+            <canvas ref={canvasRef} />
+        </div>
     )
 }
