@@ -1,4 +1,16 @@
 .App {
-  /* text-align: center; */
+    display: grid;
+    grid-template-rows: 0.1fr 1fr;
 }
 
+.paint-header {
+    display: flex;
+}
+
+.paint-content {
+    display: flex;
+}
+
+#paint-text {
+    margin-left: 17em;
+}
