@@ -9,7 +9,6 @@ function App() {
 
   // grabs hex value from ColorPicker
   const getColor = (color) => {
-    console.log('hex Value', color);
     setColor(color);
   };
 

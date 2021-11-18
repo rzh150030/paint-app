@@ -30,7 +30,7 @@ export const PaintCanvas = ({color}) => {
         ctx.lineJoin = "round";
         ctx.lineCap = "round";
         ctx.strokeStyle = color;
-
+        ctx.lineWidth = 20;
         ctx.lineTo(mouse.x, mouse.y);
         ctx.stroke();
     };
@@ -38,7 +38,7 @@ export const PaintCanvas = ({color}) => {
     useEffect(() => {
         const canvas = canvasRef.current;
         const ctx = canvas.getContext("2d");
-        ctx.fillStyle = '#000000';
+        ctx.fillStyle = '#fff';
         ctx.canvas.width = window.innerWidth - 100;
         ctx.canvas.height = window.innerHeight;
         ctx.fillRect(0, 0, ctx.canvas.width, ctx.canvas.height);
