@@ -2,6 +2,7 @@ import { useState } from 'react';
 import {PaintCanvas} from "./components/PaintCanvas/PaintCanvas.js";
 import PaintToolsContainer from './components/PaintToolsContainer/PaintToolsContainer'
 import './App.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 
 function App() {
@@ -14,8 +15,14 @@ function App() {
 
   return (
     <div className="App">
-      <PaintToolsContainer getColor={getColor}/>
-      <PaintCanvas color={color} />
+      <header>
+        <FontAwesomeIcon icon="fa-solid fa-circle-arrow-left" />
+        <h1>Draw your creations here!</h1>
+      </header>
+      <div>
+        <PaintToolsContainer getColor={getColor}/>
+        <PaintCanvas color={color} />
+      </div>
     </div>
   );
 }
