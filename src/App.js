@@ -17,7 +17,7 @@ function App() {
   return (
     <div className="App">
       <header>
-        <FontAwesomeIcon icon={faArrowCircleLeft}/>
+        <FontAwesomeIcon icon={faArrowCircleLeft} style={{fontSize: "3rem"}}/>
         <h1>Draw your creations here!</h1>
       </header>
       <div>
