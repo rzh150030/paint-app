@@ -1,6 +1,7 @@
 import React, {useRef, useEffect} from "react";
 
-export const PaintCanvas = ({color}) => {
+export const PaintCanvas = ({color, brushSize}) => {
+    
     const canvasRef = useRef(null);
     const mouse = {x: 0, y: 0};
 
@@ -30,7 +31,7 @@ export const PaintCanvas = ({color}) => {
         ctx.lineJoin = "round";
         ctx.lineCap = "round";
         ctx.strokeStyle = color;
-
+        ctx.lineWidth = brushSize;
         ctx.lineTo(mouse.x, mouse.y);
         ctx.stroke();
     };
@@ -38,7 +39,7 @@ export const PaintCanvas = ({color}) => {
     useEffect(() => {
         const canvas = canvasRef.current;
         const ctx = canvas.getContext("2d");
-        ctx.fillStyle = '#000000';
+        ctx.fillStyle = '#eee';
         ctx.canvas.width = window.innerWidth - 100;
         ctx.canvas.height = window.innerHeight;
         ctx.fillRect(0, 0, ctx.canvas.width, ctx.canvas.height);

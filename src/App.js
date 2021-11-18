@@ -1,29 +1,22 @@
-import { useState } from 'react';
-import {PaintCanvas} from "./components/PaintCanvas/PaintCanvas.js";
-import PaintToolsContainer from './components/PaintToolsContainer/PaintToolsContainer'
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route
+} from 'react-router-dom';
+import Canvas from './Routes/Canvas/Canvas.js';
+import LandingPage from './Routes/LandingPage/LandingPage.js';
 import './App.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowCircleLeft } from '@fortawesome/free-solid-svg-icons';
-
 
 function App() {
-  const [ color, setColor ] = useState('#FFF');
-
-  // grabs hex value from ColorPicker
-  const getColor = (color) => {
-    setColor(color);
-  };
 
   return (
     <div className="App">
-      <header className="paint-header">
-        <FontAwesomeIcon icon={faArrowCircleLeft} style={{fontSize: "3rem", marginTop: "11px"}}/>
-        <h1 id="paint-text">Draw your creations here!</h1>
-      </header>
-      <div className="paint-content">
-        <PaintToolsContainer getColor={getColor}/>
-        <PaintCanvas color={color} />
-      </div>
+      <Router>
+        <Routes>
+          <Route index element={<LandingPage/>} />
+          <Route path='/canvas' element={<Canvas />} />
+        </Routes>
+      </Router>
     </div>
   );
 }

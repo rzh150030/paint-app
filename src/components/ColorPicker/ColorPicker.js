@@ -58,6 +58,7 @@ export default function ColorPicker({getColor}) {
     return (
         <div>
             <div>
+                <div>Color</div>
                 <div style={ styles.swatch } onClick={ handleClick }>
                     <div style={ styles.color } />
                 </div>
