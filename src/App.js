@@ -8,11 +8,16 @@ import { faArrowCircleLeft } from '@fortawesome/free-solid-svg-icons';
 
 function App() {
   const [ color, setColor ] = useState('#FFF');
+  const [ brushSize, setBrushSize ] = useState('1')
 
   // grabs hex value from ColorPicker
   const getColor = (color) => {
     setColor(color);
   };
+
+  const getBrushSize = (brushSize) => {
+    setBrushSize(brushSize);
+  }
 
   return (
     <div className="App">
@@ -20,8 +25,8 @@ function App() {
         <FontAwesomeIcon icon={faArrowCircleLeft} style={{fontSize: "3rem", marginTop: "11px"}}/>
         <h1 id="paint-text">Draw your creations here!</h1>
       </header>
-      <div className="paint-content">
-        <PaintToolsContainer getColor={getColor}/>
+      <div className="paint-content">                
+        <PaintToolsContainer getColor={getColor} getBrushSize={getBrushSize} brushSize={brushSize}/>
         <PaintCanvas color={color} />
       </div>
     </div>
