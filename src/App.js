@@ -3,6 +3,7 @@ import {PaintCanvas} from "./components/PaintCanvas/PaintCanvas.js";
 import PaintToolsContainer from './components/PaintToolsContainer/PaintToolsContainer'
 import './App.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowCircleLeft } from '@fortawesome/free-solid-svg-icons';
 
 
 function App() {
@@ -16,7 +17,7 @@ function App() {
   return (
     <div className="App">
       <header>
-        <FontAwesomeIcon icon="fa-solid fa-circle-arrow-left" />
+        <FontAwesomeIcon icon={faArrowCircleLeft}/>
         <h1>Draw your creations here!</h1>
       </header>
       <div>
