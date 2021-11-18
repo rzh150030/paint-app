@@ -16,11 +16,11 @@ function App() {
 
   return (
     <div className="App">
-      <header>
+      <header className="paint-header">
         <FontAwesomeIcon icon={faArrowCircleLeft} style={{fontSize: "3rem"}}/>
-        <h1>Draw your creations here!</h1>
+        <h1 id="paint-text">Draw your creations here!</h1>
       </header>
-      <div>
+      <div className="paint-content">
         <PaintToolsContainer getColor={getColor}/>
         <PaintCanvas color={color} />
       </div>
