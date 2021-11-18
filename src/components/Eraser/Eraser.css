@@ -1,0 +1,7 @@
+.eraser{
+    font-size: 1.5em;
+}
+
+.eraser:hover{
+    cursor: pointer;
+}

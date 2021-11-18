@@ -7,8 +7,8 @@ import { Link } from 'react-router-dom';
 import './Canvas.css';
 
 export default function Canvas() {
-    const [ color, setColor ] = useState('#FFF');
-    const [ brushSize, setBrushSize ] = useState('1');
+    const [ color, setColor ] = useState('#fff');
+    const [ brushSize, setBrushSize ] = useState('4');
 
     // grabs hex value from ColorPicker
     const getColor = (color) => {

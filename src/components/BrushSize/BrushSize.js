@@ -1,4 +1,3 @@
-import React, { useState } from 'react';
 import './BrushSize.css';
 
 // TODO Grab the value for brush size from input
