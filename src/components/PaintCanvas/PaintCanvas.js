@@ -1,6 +1,6 @@
 import React, {useRef, useEffect} from "react";
 
-export const PaintCanvas = ({color}) => {
+export const PaintCanvas = ({color, brushSize}) => {
     const canvasRef = useRef(null);
     const mouse = {x: 0, y: 0};
 
@@ -30,7 +30,7 @@ export const PaintCanvas = ({color}) => {
         ctx.lineJoin = "round";
         ctx.lineCap = "round";
         ctx.strokeStyle = color;
-        ctx.lineWidth = 20;
+        ctx.lineWidth = brushSize;
         ctx.lineTo(mouse.x, mouse.y);
         ctx.stroke();
     };
