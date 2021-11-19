@@ -7,7 +7,7 @@ export default function LandingPage() {
     return (
         <div className="landpage">
             <section className="landpage-introduction">
-                <h2>Welcome to a simple paint app!</h2>
+                <h2 id="landpage-title">Welcome to a simple paint app!</h2>
                 <Link to='/canvas' id="canvas-link">Try it out</Link>
             </section>
         </div>
