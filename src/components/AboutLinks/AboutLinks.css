@@ -1,0 +1,30 @@
+.about-links {
+    display: flex;
+    align-items: center;
+    background-color: #677a85;
+    color: white;
+    font-family: "Rubik", sans-serif;
+    height: 4em;
+}
+
+.author-credits {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-weight: bold;
+    margin: 0;
+    width: 100%;
+}
+
+.authors {
+    position: relative;
+    font-weight: normal;
+    text-decoration: none;
+    color: #a7c1d1;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.authors:hover {
+   color: white;
+}
