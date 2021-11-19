@@ -1,12 +1,21 @@
 .landpage-introduction {
-    height: 100%;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 40em;
     color: white;
     background: no-repeat center/100% url("/home/rzhuang/app_academy/mint-hackathon/paint-app/src/images/brush-g8641e7339_1920.jpg");
 }
 
+
 #canvas-link {
+    display: flex;
+    justify-content: center;
+    width: 10%;
     color: white;
     text-decoration: none;
     background-color: green;
+    margin-top: 5em;
+    
 }
