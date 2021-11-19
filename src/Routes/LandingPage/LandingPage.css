@@ -8,6 +8,14 @@
     background: no-repeat center/100% url("/home/rzhuang/app_academy/mint-hackathon/paint-app/src/images/brush-g8641e7339_1920.jpg");
 }
 
+.landpage-about {
+    padding-top: 2em;;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 #landpage-title {
     font-size: 5em;
 }
