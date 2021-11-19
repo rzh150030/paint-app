@@ -10,6 +10,9 @@ export default function LandingPage() {
                 <h2 id="landpage-title">Welcome to a simple paint app!</h2>
                 <Link to='/canvas' id="canvas-link">Try it out</Link>
             </section>
+            <section className="landpage-about">
+                About
+            </section>
         </div>
     )
 }
