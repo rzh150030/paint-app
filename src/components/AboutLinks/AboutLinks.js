@@ -1,5 +1,6 @@
+import "./Aboutlinks.css";
 
-export default function() {
+export default function AboutLinks() {
     return (
         <footer className="about-links">
             <p className="author-credits">Developed by:
