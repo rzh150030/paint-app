@@ -3,10 +3,13 @@ import { faBroom } from '@fortawesome/free-solid-svg-icons';
 import './ClearCanvas.css';
 
 export default function ClearCanvas({clearCanvas}) {
-    
+
     return (
         <div>
-             <FontAwesomeIcon className="broom" icon={faBroom} onClick={clearCanvas} />
+            Clear Canvas
+           <div>
+                <FontAwesomeIcon className="broom" icon={faBroom} onClick={clearCanvas} />
+            </div>
         </div>
     )
 }

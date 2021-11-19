@@ -2,7 +2,6 @@ import React, {useRef, useEffect} from "react";
 
 export const PaintCanvas = ({color, brushSize, canvasColor}) => {
     
-
     const canvasRef = useRef(null);
     const mouse = {x: 0, y: 0};
 

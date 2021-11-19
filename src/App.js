@@ -5,6 +5,7 @@ import {
 } from 'react-router-dom';
 import Canvas from './Routes/Canvas/Canvas.js';
 import LandingPage from './Routes/LandingPage/LandingPage.js';
+import AboutLinks from './components/AboutLinks/AboutLinks.js';
 import './App.css';
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
           <Route path='/canvas' element={<Canvas />} />
         </Routes>
       </Router>
+      <AboutLinks />
     </div>
   );
 }
