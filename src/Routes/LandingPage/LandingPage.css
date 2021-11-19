@@ -9,11 +9,18 @@
 }
 
 .landpage-about {
-    padding-top: 2em;;
+    padding-top: 3em;;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+#about-label {
+    margin-bottom: 1em;
+    padding-bottom: 0.1em;
+    border-bottom: solid;
+    font-size: 2em;
 }
 
 #landpage-title {
