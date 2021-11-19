@@ -1,3 +1,11 @@
 .landpage-introduction {
+    text-align: center;
+    color: white;
     background: no-repeat center/100% url("/home/rzhuang/app_academy/mint-hackathon/paint-app/src/images/istockphoto-174896503-170667a.jpg");
+}
+
+#canvas-link {
+    color: white;
+    text-decoration: none;
+    background-color: green;
 }
