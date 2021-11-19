@@ -41,7 +41,7 @@ export const PaintCanvas = ({color, brushSize}) => {
         const ctx = canvas.getContext("2d");
         ctx.canvas.width = window.innerWidth - 100;
         ctx.canvas.height = window.innerHeight;
-        ctx.fillStyle = "red";
+        ctx.fillStyle = "#000000";
         ctx.fillRect(0, 0, ctx.canvas.width, ctx.canvas.height);
     }, []);
 
