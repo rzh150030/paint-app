@@ -6,7 +6,7 @@ Paint App is a simple app built with react that allows users to draw picture usi
 
 [live site](https://blissful-bassi-ede06c.netlify.app/)
 
-
+![image of app]()
 
 ### Installation
 
