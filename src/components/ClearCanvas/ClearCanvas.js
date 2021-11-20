@@ -6,7 +6,7 @@ export default function ClearCanvas({clearCanvas}) {
 
     return (
         <div>
-            Clear Canvas
+           <div className="tool-name">Clear Canvas</div>
            <div>
                 <FontAwesomeIcon className="broom" icon={faBroom} onClick={clearCanvas} />
             </div>

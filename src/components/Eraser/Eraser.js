@@ -11,7 +11,7 @@ export default function Eraser({getColor}) {
 
     return (
         <div onClick={changeColor}>
-            <div>Eraser</div>
+            <div className="tool-name">Eraser</div>
             <FontAwesomeIcon className="eraser" icon={faEraser} />
         </div>
     )

@@ -28,15 +28,16 @@ export default function ColorPicker({getColor}) {
     const styles = reactCSS({
         'default': {
           color: {
-            width: '36px',
-            height: '14px',
+            width: '45px',
+            height: '16px',
             borderRadius: '2px',
             background: `rgba(${ color.r }, ${ color.g }, ${ color.b }, ${ color.a })`,
           },
           swatch: {
             padding: '5px',
-            background: '#fff',
-            borderRadius: '1px',
+            background: '#000',
+            margin: '0 10px',
+            borderRadius: '5px',
             boxShadow: '0 0 0 1px rgba(0,0,0,.1)',
             display: 'inline-block',
             cursor: 'pointer',
@@ -58,7 +59,7 @@ export default function ColorPicker({getColor}) {
     return (
         <div>
             <div>
-                <div>Color</div>
+                <div className="tool-name">Color</div>
                 <div style={ styles.swatch } onClick={ handleClick }>
                     <div style={ styles.color } />
                 </div>
