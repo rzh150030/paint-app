@@ -6,6 +6,8 @@ Paint App is a simple app built with react that allows users to draw picture usi
 
 [live site](https://blissful-bassi-ede06c.netlify.app/)
 
+
+
 ### Installation
 
 This app can be installed by cloning from this repository:
@@ -37,3 +39,6 @@ This app was deployed using Netlify. Create an account on Netlify and start by a
 4. Click deploy site button and wait for Netlify to finish building the site.
 
 5. Once the build completes, the site is live. Site url can be found in the overview and pushes to the main branch on GitHub will update onto the live site.
+
+
+### Developers
