@@ -40,7 +40,12 @@ Run the command `npx create-react-app paint-app`.
 
 Enter the folder using the command `cd paint-app`.
 
-Install react-router-dom with npm install.
+Install react-router-dom and with npm install.
+
+Install Font Awesome icons using these commands.
+`npm install --save @fortawesome/fontawesome-svg-core`
+`npm install --save @fortawesome/free-solid-svg-icons`
+`npm install --save @fortawesome/react-fontawesome`
 
 Add this link tag to the header in public/index.html
 
