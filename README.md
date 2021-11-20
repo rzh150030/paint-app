@@ -1,70 +1,74 @@
-# Getting Started with Create React App
+# Paint App
+
+Paint App is a simple app built with react that allows users to draw picture using their mouse to create free-form lines. You can select the color of your brush and size of your brush to create larger lines when drawing.
+
+[Live Site](https://blissful-bassi-ede06c.netlify.app/)
+
+
+## Landing Page
+![landing-page](src/images/Screenshot_2021-11-20_135219.png)
+
+## Main App
+![app-screenshot](src/images/Screenshot_2021-11-20_133700.png)
+
+## Development
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+### Cloning the app
+
+This app can be installed by cloning from this repository:
+`https://github.com/rzh150030/paint-app.git`
+
+Install all dependencies using this command:
+`npm install`
 
 In the project directory, you can run:
-
-### `npm start`
+`npm start`
 
 Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Open http://localhost:3000 to view it in the browser.
 
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
 
-### `npm test`
+### Develop from Scratch
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Make sure to have node package manager 5.2+ installed on your system.
 
-### `npm run build`
+Run the command `npx create-react-app paint-app`.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Enter the folder using the command `cd paint-app`.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Install react-router-dom and with npm install.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Install Font Awesome icons using these commands.
+`npm install --save @fortawesome/fontawesome-svg-core`
+`npm install --save @fortawesome/free-solid-svg-icons`
+`npm install --save @fortawesome/react-fontawesome`
 
-### `npm run eject`
+Add this link tag to the header in public/index.html
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+`<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">`
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Deployment
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+This app was deployed using Netlify. Create an account on Netlify and start by adding a new project your account.
 
-## Learn More
+1. First push the local repo to GitHub and then link Netlify to GitHub.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+2. Authorize Netlify to access your GitHub account and then select the repo containing the Paint App project.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+3. Configure the options and make sure your public site files are placed after building the site and your build command is whatever you run to build the site (e.g. `npm run build`).
 
-### Code Splitting
+4. Click deploy site button and wait for Netlify to finish building the site.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+5. Once the build completes, the site is live. Site url can be found in the overview and pushes to the main branch on GitHub will update onto the live site.
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Developers
 
-### Making a Progressive Web App
+[Richard Huang](https://github.com/rzh150030)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+[Roger Zavala](https://github.com/Rzavala414)
