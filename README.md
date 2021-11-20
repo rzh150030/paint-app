@@ -8,7 +8,7 @@ Paint App is a simple app built with react that allows users to draw picture usi
 
 
 # Landing Page
-![landing-page]()
+![landing-page](src/images/Screenshot_2021-11-20_135219.png)
 
 # Main App
 ![app-screenshot](src/images/Screenshot_2021-11-20_133700.png)
