@@ -6,7 +6,7 @@ Paint App is a simple app built with react that allows users to draw picture usi
 
 [live site](https://blissful-bassi-ede06c.netlify.app/)
 
-![image of app](src/images/Screenshot 2021-11-20 133700.png)
+![app-screenshot](src/images/Screenshot_2021-11-20_133700.png)
 
 ### Installation
 
@@ -20,7 +20,7 @@ In the project directory, you can run:
 `npm start`
 
 Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Open http://localhost:3000 to view it in the browser.
 
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
