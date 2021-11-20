@@ -2,7 +2,7 @@
 
 Paint App is a simple app built with react that allows users to draw picture using their mouse to create free-form lines. You can select the color of your brush and size of your brush to create larger lines when drawing.
 
-[live site](https://blissful-bassi-ede06c.netlify.app/)
+[Live Site](https://blissful-bassi-ede06c.netlify.app/)
 
 
 ## Landing Page
