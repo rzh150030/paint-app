@@ -1,9 +1,11 @@
 import React, {useRef, useEffect} from "react";
+import {addCoordAction} from "../../store/reducer";
 
 export const PaintCanvas = ({color, brushSize, canvasColor}) => {
-    
+
     const canvasRef = useRef(null);
     const mouse = {x: 0, y: 0};
+    const drawCoords = [];
 
     const handleMouseDown = () => {
         const canvas = canvasRef.current;
