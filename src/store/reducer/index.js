@@ -10,7 +10,7 @@ export function addCoordAction(image) {
 const initialState = {images: []};
 
 export default function reducer(state = initialState, action) {
-    switch(action.type) {
+    switch (action.type) {
         case ADD_COORD:
             const newState = {...state, images: [...state.images, action.drawCoords]};
             return newState;
