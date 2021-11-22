@@ -1,0 +1,13 @@
+.color-box{
+    width: 30px;
+    margin: 2px;
+    border:1px solid #fff;
+}
+.color-box:hover{
+    cursor: pointer;
+    border: 2px solid #fff;
+}
+
+.color-box:active{
+    border: 2px solid #fff;
+}
