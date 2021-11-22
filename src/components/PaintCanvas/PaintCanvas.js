@@ -38,7 +38,7 @@ export const PaintCanvas = ({color, brushSize, canvasColor}) => {
         ctx.strokeStyle = color;
         ctx.lineWidth = brushSize;
         ctx.lineTo(mouse.x, mouse.y);
-        drawCoords.push({x: mouse.x, y: mouse.y});
+        drawCoords.push({x: mouse.x, y: mouse.y, brushSize: brushSize, color: color});
         ctx.stroke();
     };
 

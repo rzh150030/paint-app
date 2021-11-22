@@ -6,13 +6,13 @@ import ClearCanvas from '../ClearCanvas/ClearCanvas.js';
 import Undo from '../Undo/Undo.js';
 import './PaintToolsContainer.css';
 
-export default function PaintToolsContainer({getColor, getBrushSize, brushSize, clearCanvas}) {
+export default function PaintToolsContainer({getColor, getBrushSize, brushSize, clearCanvas, color}) {
     return (
         <div className="PaintToolsContainer">
            <ColorPicker getColor={getColor} />
            <BrushSize getBrushSize={getBrushSize} brushSize={brushSize}/>
            <Eraser getColor={getColor}/>
-           <Undo  getColor={getColor} clearCanvas={clearCanvas} />
+           <Undo color={color} brushSize={brushSize}/>
            <ClearCanvas clearCanvas={clearCanvas} />
         </div>
     )

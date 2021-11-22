@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useSelector, useDispatch } from 'react-redux';
 import { undoAction } from "../../store/reducer";
 
-export default function Undo({color}) {
+export default function Undo({color, brushSize}) {
     const dispatch = useDispatch();
     const images = useSelector(state => state.images);
     const canvas = useSelector(state => state.canvas);
@@ -21,6 +21,8 @@ export default function Undo({color}) {
 
                 for (let j = 1; j < coords.length; j++) {
                     const coord = coords[j];
+                    ctx.lineWidth = coord.brushSize;
+                    ctx.strokeStyle = coord.color;
                     ctx.lineJoin = "round";
                     ctx.lineCap = "round";
                     ctx.lineTo(coord.x, coord.y);
@@ -28,6 +30,8 @@ export default function Undo({color}) {
                 }
             }
         }
+        ctx.strokeStyle = color;
+        ctx.lineWidth = brushSize;
     }
 
     const cleanCanvas = (ctx) => {
@@ -43,5 +47,3 @@ export default function Undo({color}) {
         </div>
     )
 }
-
-
