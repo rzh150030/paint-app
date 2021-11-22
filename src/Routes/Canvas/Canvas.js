@@ -44,7 +44,8 @@ export default function Canvas() {
                     getColor={getColor} 
                     getBrushSize={getBrushSize} 
                     brushSize={brushSize}
-                    clearCanvas={clearCanvas}/>
+                    clearCanvas={clearCanvas}
+                    color={color}/>
 
                 <PaintCanvas color={color} brushSize={brushSize} canvasColor={canvasColor}/>
             </div>
