@@ -19,8 +19,9 @@ export default function Undo({color}) {
             ctx.moveTo(images[0].x, images[0].y);
 
             for (let i = 0; i < images.length; i++) {
-                for (let j = 0; j < images.length; j++) {
-                    const coord = images[j];
+                const coords = images[i];
+                for (let j = 0; j < coords.length; j++) {
+                    const coord = coords[j];
                     ctx.lineJoin = "round";
                     ctx.lineCap = "round";
                     ctx.lineTo(coord.x, coord.y);
