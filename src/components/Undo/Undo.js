@@ -12,20 +12,21 @@ export default function Undo({color}) {
         const ctx = canvas.getContext("2d");
         dispatch(undoAction());
         cleanCanvas(ctx);
-        
-        if (images.length) {
-            ctx.beginPath();
-            ctx.moveTo(images[0].x, images[0].y);
 
+        if (images.length) {
             for (let i = 0; i < images.length; i++) {
                 const coords = images[i];
-                for (let j = 0; j < coords.length; j++) {
+                ctx.beginPath();
+                ctx.moveTo(coords[0].x, coords[0].y);
+
+                for (let j = 1; j < coords.length; j++) {
                     const coord = coords[j];
                     ctx.lineJoin = "round";
                     ctx.lineCap = "round";
                     ctx.lineTo(coord.x, coord.y);
                     ctx.stroke();
                 }
+
             }
         }
     }
