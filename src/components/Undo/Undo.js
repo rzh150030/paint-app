@@ -26,7 +26,6 @@ export default function Undo({color}) {
                     ctx.lineTo(coord.x, coord.y);
                     ctx.stroke();
                 }
-
             }
         }
     }
@@ -46,20 +45,3 @@ export default function Undo({color}) {
 }
 
 
-/* const ctx = canvas.getContext("2d");
-            const eraseCoords = images[images.length - 1];
-            const currColor = color;
-            ctx.strokeStyle = "#000000";
-            ctx.beginPath();
-            ctx.moveTo(eraseCoords[0].x, eraseCoords[0].y);
-            dispatch(undoAction());
-
-            for (let i = 1; i < eraseCoords.length; i++) { //draw and erase the line drawn
-                //need to account for brush size later
-                const coord = eraseCoords[i];
-                ctx.lineJoin = "round";
-                ctx.lineCap = "round";
-                ctx.lineTo(coord.x, coord.y);
-                ctx.stroke();
-            }
-            ctx.strokeStyle = currColor; */
