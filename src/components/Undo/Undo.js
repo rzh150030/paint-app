@@ -1,30 +1,35 @@
 import { faUndo } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useSelector } from 'react-redux';
-import { useRef } from "react";
-
+import { useSelector, useDispatch } from 'react-redux';
+import { undoAction } from "../../store/reducer";
 
 export default function Undo({getColor, color}) {
+    const dispatch = useDispatch();
     const images = useSelector(state => state.images);
-    const canvasRef = useRef(null);
+    const canvas = useSelector(state => state.canvas);
 
     const handleUndo = () => {
-        const canvas = canvasRef.current;
-        const ctx = canvas.getContext("2d");
-        const eraseCoords = images[images.length - 1];
-        const currColor = color;
-        getColor('#000');
-        ctx.beginPath();
+        if (images.length) {
+            const ctx = canvas.getContext("2d");
+            const eraseCoords = images[images.length - 1];
+            const currColor = color;
+            // getColor('#000');
+            // getColor("#4287f5");
+            ctx.strokeStyle = "#000000";
+            ctx.beginPath();
+            ctx.moveTo(eraseCoords[0].x, eraseCoords[0].y);
+            dispatch(undoAction());
 
-        for (let i = 0; i < eraseCoords.length; i++) { //draw and erase the line drawn
-            //need to account for brush size later
-            const coord = eraseCoords[i];
-            ctx.lineJoin = "round";
-            ctx.lineCap = "round";
-            ctx.lineTo(coord.x, coord.y);
-            ctx.stroke();
+            for (let i = 1; i < eraseCoords.length; i++) { //draw and erase the line drawn
+                //need to account for brush size later
+                const coord = eraseCoords[i];
+                ctx.lineJoin = "round";
+                ctx.lineCap = "round";
+                ctx.lineTo(coord.x, coord.y);
+                ctx.stroke();
+            }
+            ctx.strokeStyle = currColor;
         }
-        getColor(currColor);
     }
 
     return (
