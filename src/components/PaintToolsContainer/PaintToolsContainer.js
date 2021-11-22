@@ -12,7 +12,7 @@ export default function PaintToolsContainer({getColor, getBrushSize, brushSize, 
            <ColorPicker getColor={getColor} />
            <BrushSize getBrushSize={getBrushSize} brushSize={brushSize}/>
            <Eraser getColor={getColor}/>
-           <Undo  getColor={getColor}/>
+           <Undo  getColor={getColor} />
            <ClearCanvas clearCanvas={clearCanvas} />
         </div>
     )
