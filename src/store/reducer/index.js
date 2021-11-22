@@ -1,5 +1,6 @@
 const ADD_COORD = "ADD_COORD";
 const UNDO_DRAW = "UNDO_DRAW";
+const ADD_CANVAS = "ADD_CANVAS";
 
 export function addCoordAction(image) {
     return {
@@ -14,6 +15,13 @@ export function undoAction() {
     };
 }
 
+export function addCanvas(canvas) {
+    return {
+        type: ADD_CANVAS,
+        canvas: canvas
+    }
+}
+
 const initialState = {images: []};
 
 export default function reducer(state = initialState, action) {
@@ -24,6 +32,8 @@ export default function reducer(state = initialState, action) {
         case UNDO_DRAW:
             state.images.pop();
             return {...state, images: [...state.images]};
+        case ADD_CANVAS:
+            return {...state, canvas: action.canvas};
         default:
             return state;
     }

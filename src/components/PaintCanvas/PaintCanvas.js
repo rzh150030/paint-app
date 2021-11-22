@@ -1,6 +1,6 @@
 import React, {useRef, useEffect} from "react";
-import { useDispatch } from 'react-redux';
-import {addCoordAction} from "../../store/reducer";
+import {useDispatch} from 'react-redux';
+import {addCoordAction, addCanvas} from "../../store/reducer";
 
 export const PaintCanvas = ({color, brushSize, canvasColor}) => {
     const dispatch = useDispatch();
@@ -49,7 +49,8 @@ export const PaintCanvas = ({color, brushSize, canvasColor}) => {
         ctx.canvas.height = window.innerHeight;
         ctx.fillStyle = canvasColor;
         ctx.fillRect(0, 0, ctx.canvas.width, ctx.canvas.height);
-    }, [canvasColor]);
+        dispatch(addCanvas(canvas));
+    }, [canvasColor, dispatch]);
 
     return (
         <div id="sketch">
