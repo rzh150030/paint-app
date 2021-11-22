@@ -1,7 +1,9 @@
 .broom{
     font-size: 1.5em;
+    margin-left: 8px;
 }
 
 .broom:hover{
     cursor: pointer;
+    color: rgb(2, 141, 255);
 }

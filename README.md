@@ -1,56 +1,37 @@
-# Paint App
+# [**Paint**](https://blissful-bassi-ede06c.netlify.app/)
 
-Paint App is a simple app built with react that allows users to draw picture using their mouse to create free-form lines. You can select the color of your brush and size of your brush to create larger lines when drawing.
-
-[Live Site](https://blissful-bassi-ede06c.netlify.app/)
+Paint is a react app that allows users to draw on screen using their mouse by creating free-form lines. You can choose from thousands of colors and adjust your tool size.
 
 
 ## Landing Page
 ![landing-page](src/images/Screenshot_2021-11-20_135219.png)
 
-## Main App
+## Canvas
 ![app-screenshot](src/images/Screenshot_2021-11-20_133700.png)
 
-## Development
+# Installation
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## System Requirements
+**Node 5.2+**
+<br>
 
 ### Cloning the app
 
 This app can be installed by cloning from this repository:
-`https://github.com/rzh150030/paint-app.git`
+```
+https://github.com/rzh150030/paint-app.git
+```
 
-Install all dependencies using this command:
-`npm install`
+Cd into the newly cloned folder and install all dependencies using this command:
+```
+npm install
+```
 
-In the project directory, you can run:
-`npm start`
-
-Runs the app in the development mode.\
-Open http://localhost:3000 to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### Develop from Scratch
-
-Make sure to have node package manager 5.2+ installed on your system.
-
-Run the command `npx create-react-app paint-app`.
-
-Enter the folder using the command `cd paint-app`.
-
-Install react-router-dom and with npm install.
-
-Install Font Awesome icons using these commands.
-`npm install --save @fortawesome/fontawesome-svg-core`
-`npm install --save @fortawesome/free-solid-svg-icons`
-`npm install --save @fortawesome/react-fontawesome`
-
-Add this link tag to the header in public/index.html
-
-`<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">`
-
+To start the app and run the live server use this command:
+```
+npm start
+```
+<br>
 
 ## Deployment
 
@@ -66,6 +47,8 @@ This app was deployed using Netlify. Create an account on Netlify and start by a
 
 5. Once the build completes, the site is live. Site url can be found in the overview and pushes to the main branch on GitHub will update onto the live site.
 
+## Tech Used
+React.js React-Router React-Color React-CSS Font-Awesome
 
 ## Developers
 
