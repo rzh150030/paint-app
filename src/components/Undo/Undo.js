@@ -3,29 +3,38 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useSelector, useDispatch } from 'react-redux';
 import { undoAction } from "../../store/reducer";
 
-export default function Undo({clearCanvas}) {
+export default function Undo({color}) {
     const dispatch = useDispatch();
     const images = useSelector(state => state.images);
     const canvas = useSelector(state => state.canvas);
 
     const handleUndo = () => {
+        dispatch(undoAction());
         if (images.length) {
 
             const ctx = canvas.getContext("2d");
-            clearCanvas();
-            dispatch(undoAction());
+            cleanCanvas(ctx);
             debugger
             ctx.beginPath();
             ctx.moveTo(images[0].x, images[0].y);
 
-            for (let i = 1; i < images.length; i++) {
-                const coord = images[i];
-                ctx.lineJoin = "round";
-                ctx.lineCap = "round";
-                ctx.lineTo(coord.x, coord.y);
-                ctx.stroke();
+            for (let i = 0; i < images.length; i++) {
+                for (let j = 0; j < images.length; j++) {
+                    const coord = images[j];
+                    ctx.lineJoin = "round";
+                    ctx.lineCap = "round";
+                    ctx.lineTo(coord.x, coord.y);
+                    ctx.stroke();
+                }
             }
+            debugger
         }
+    }
+
+    const cleanCanvas = (ctx) => {
+        ctx.fillStyle = "black";
+        ctx.fillRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+        ctx.strokeStyle = color;
     }
 
     return (
