@@ -9,12 +9,11 @@ export default function Undo({color}) {
     const canvas = useSelector(state => state.canvas);
 
     const handleUndo = () => {
+        const ctx = canvas.getContext("2d");
         dispatch(undoAction());
+        cleanCanvas(ctx);
+        
         if (images.length) {
-
-            const ctx = canvas.getContext("2d");
-            cleanCanvas(ctx);
-            debugger
             ctx.beginPath();
             ctx.moveTo(images[0].x, images[0].y);
 
@@ -28,7 +27,6 @@ export default function Undo({color}) {
                     ctx.stroke();
                 }
             }
-            debugger
         }
     }
 
