@@ -4,9 +4,9 @@ import reactCSS from 'reactcss';
 import './ColorPicker.css';
 
 
-export default function ColorPicker({getColor}) {
+export default function ColorPicker({getColor, color}) {
 
-    const [color, setColor] = useState({ r: '255', g: '255', b: '255', a: '1'});
+    // const [color, setColor] = useState({ r: '255', g: '255', b: '255', a: '1'});
 
     const [displayColorPicker, setDisplayColorPicker] = useState(false);
 
@@ -21,7 +21,7 @@ export default function ColorPicker({getColor}) {
 
     const handleChange = (color) => {
         getColor(color.hex);
-        setColor(color.rgb);
+        // setColor(color.rgb);
     };
 
     // styles for ChromePicker and Swatch
@@ -31,7 +31,7 @@ export default function ColorPicker({getColor}) {
             width: '45px',
             height: '16px',
             borderRadius: '2px',
-            background: `rgba(${ color.r }, ${ color.g }, ${ color.b }, ${ color.a })`,
+            background: `${color}`,
           },
           swatch: {
             padding: '5px',

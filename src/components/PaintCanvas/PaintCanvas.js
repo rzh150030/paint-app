@@ -10,7 +10,6 @@ export const PaintCanvas = ({color, brushSize, canvasColor}) => {
         const ctx = canvas.getContext("2d");
         ctx.beginPath();
         ctx.moveTo(mouse.x, mouse.y);
-
         canvas.addEventListener("mousemove", onPaint, false);
     };
 
