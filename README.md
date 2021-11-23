@@ -7,7 +7,7 @@ Paint is a react app that allows users to draw on screen using their mouse by cr
 ![landing-page](src/images/Screenshot_2021-11-20_135219.png)
 
 ## Canvas
-![app-screenshot](src/images/Screenshot_2021-11-20_133700.png)
+![app-screenshot](src/images/Screenshot_2021-11-23_145351.png)
 
 # Installation
 
