@@ -2,6 +2,7 @@ import { faUndo } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useSelector, useDispatch } from 'react-redux';
 import { undoAction } from "../../store/reducer";
+import './Undo.css';
 
 export default function Undo({color, brushSize}) {
     const dispatch = useDispatch();
@@ -42,8 +43,8 @@ export default function Undo({color, brushSize}) {
 
     return (
         <div>
-           <div>Undo</div>
-           <FontAwesomeIcon icon={faUndo} onClick={handleUndo}/>
+           <div className="tool-name">Undo</div>
+           <FontAwesomeIcon className="undo" icon={faUndo} onClick={handleUndo}/>
         </div>
     )
 }
