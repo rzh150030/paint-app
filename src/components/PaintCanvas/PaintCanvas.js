@@ -1,9 +1,12 @@
 import React, {useRef, useEffect} from "react";
+import {useDispatch} from 'react-redux';
+import {addCoordAction, addCanvas} from "../../store/reducer";
 
 export const PaintCanvas = ({color, brushSize, canvasColor}) => {
-    
+    const dispatch = useDispatch();
     const canvasRef = useRef(null);
     const mouse = {x: 0, y: 0};
+    let drawCoords = [];
 
     const handleMouseDown = () => {
         const canvas = canvasRef.current;
@@ -15,6 +18,8 @@ export const PaintCanvas = ({color, brushSize, canvasColor}) => {
 
     const handleMouseUp = () => {
         const canvas = canvasRef.current;
+        dispatch(addCoordAction(drawCoords));
+        drawCoords = [];
         canvas.removeEventListener("mousemove", onPaint, false);
     };
 
@@ -32,6 +37,7 @@ export const PaintCanvas = ({color, brushSize, canvasColor}) => {
         ctx.strokeStyle = color;
         ctx.lineWidth = brushSize;
         ctx.lineTo(mouse.x, mouse.y);
+        drawCoords.push({x: mouse.x, y: mouse.y, brushSize: brushSize, color: color});
         ctx.stroke();
     };
 
@@ -42,7 +48,8 @@ export const PaintCanvas = ({color, brushSize, canvasColor}) => {
         ctx.canvas.height = window.innerHeight;
         ctx.fillStyle = canvasColor;
         ctx.fillRect(0, 0, ctx.canvas.width, ctx.canvas.height);
-    }, [canvasColor]);
+        dispatch(addCanvas(canvas));
+    }, [canvasColor, dispatch]);
 
     return (
         <div id="sketch">

@@ -3,6 +3,7 @@ import ColorPicker from '../ColorPicker/ColorPicker.js';
 import BrushSize from '../BrushSize/BrushSize.js';
 import Eraser from '../Eraser/Eraser.js';
 import ClearCanvas from '../ClearCanvas/ClearCanvas.js';
+import Undo from '../Undo/Undo.js';
 import ColorBoxContainer from '../ColorBoxContainer/ColorBoxContainer.js';
 import './PaintToolsContainer.css';
 
@@ -13,6 +14,7 @@ export default function PaintToolsContainer({getColor, getBrushSize, brushSize, 
            <ColorBoxContainer getColor={getColor} />
            <BrushSize getBrushSize={getBrushSize} brushSize={brushSize}/>
            <Eraser getColor={getColor}/>
+           <Undo color={color} brushSize={brushSize}/>
            <ClearCanvas clearCanvas={clearCanvas} />
         </div>
     )

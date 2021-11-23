@@ -34,18 +34,18 @@ export default function Canvas() {
         <div className='canvas'>
             <header className="paint-header">
                 <Link to='/'>
-                    <FontAwesomeIcon icon={faArrowCircleLeft} style={{fontSize: "3rem", marginTop: "11px"}}/> 
+                    <FontAwesomeIcon icon={faArrowCircleLeft} style={{fontSize: "3rem", marginTop: "11px"}}/>
                 </Link>
-                <h1 id="paint-text">Draw your creations here!</h1> 
+                <h1 id="paint-text">Draw your creations here!</h1>
             </header>
-            
-            <div className="paint-content">                
-                <PaintToolsContainer 
-                    getColor={getColor} 
-                    getBrushSize={getBrushSize} 
+
+            <div className="paint-content">
+                <PaintToolsContainer
+                    color={color}
+                    getColor={getColor}
+                    getBrushSize={getBrushSize}
                     brushSize={brushSize}
-                    clearCanvas={clearCanvas}
-                    color={color}/>
+                    clearCanvas={clearCanvas}/>
 
                 <PaintCanvas color={color} brushSize={brushSize} canvasColor={canvasColor}/>
             </div>
