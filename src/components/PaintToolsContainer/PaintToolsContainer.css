@@ -1,6 +1,15 @@
 .PaintToolsContainer{
     margin: 0px;
-    min-height: 90vh;
+    height: 100vh;
     max-width: 17%;
-    border: 5px solid rgb(47, 47, 47);
+    background:rgb(150, 150, 150);
+    border: 6px solid rgb(95, 86, 86);
+    font-family: 'Spartan', sans-serif;
+    color: #fff;
+    font-size: 1rem;
+}
+
+
+.tool-name{
+    margin: 5px 3px;
 }

@@ -5,10 +5,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowCircleLeft } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
 import './Canvas.css';
-// TODO clear canvas
-// TODO get user click [x]
-// TODO turn canvas black again
-
 
 export default function Canvas() {
     const [ color, setColor ] = useState('#fff');
@@ -49,7 +45,8 @@ export default function Canvas() {
                     getColor={getColor}
                     getBrushSize={getBrushSize}
                     brushSize={brushSize}
-                    clearCanvas={clearCanvas}/>
+                    clearCanvas={clearCanvas}
+                    color={color}/>
 
                 <PaintCanvas color={color} brushSize={brushSize} canvasColor={canvasColor}/>
             </div>

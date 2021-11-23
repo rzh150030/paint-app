@@ -4,9 +4,9 @@ import reactCSS from 'reactcss';
 import './ColorPicker.css';
 
 
-export default function ColorPicker({getColor}) {
+export default function ColorPicker({getColor, color}) {
 
-    const [color, setColor] = useState({ r: '255', g: '255', b: '255', a: '1'});
+    // const [color, setColor] = useState({ r: '255', g: '255', b: '255', a: '1'});
 
     const [displayColorPicker, setDisplayColorPicker] = useState(false);
 
@@ -21,22 +21,23 @@ export default function ColorPicker({getColor}) {
 
     const handleChange = (color) => {
         getColor(color.hex);
-        setColor(color.rgb);
+        // setColor(color.rgb);
     };
 
     // styles for ChromePicker and Swatch
     const styles = reactCSS({
         'default': {
           color: {
-            width: '36px',
-            height: '14px',
+            width: '45px',
+            height: '16px',
             borderRadius: '2px',
-            background: `rgba(${ color.r }, ${ color.g }, ${ color.b }, ${ color.a })`,
+            background: `${color}`,
           },
           swatch: {
             padding: '5px',
-            background: '#fff',
-            borderRadius: '1px',
+            background: '#000',
+            margin: '0 10px',
+            borderRadius: '5px',
             boxShadow: '0 0 0 1px rgba(0,0,0,.1)',
             display: 'inline-block',
             cursor: 'pointer',
@@ -58,7 +59,7 @@ export default function ColorPicker({getColor}) {
     return (
         <div>
             <div>
-                <div>Color</div>
+                <div className="tool-name">Color</div>
                 <div style={ styles.swatch } onClick={ handleClick }>
                     <div style={ styles.color } />
                 </div>

@@ -11,9 +11,9 @@ export default function BrushSize({getBrushSize, brushSize}) {
     
     return (
         <div>
-            <label>Brush Size: {brushSize} 
+            <div className='tool-name'>Brush Size: {brushSize} </div>
                 <input id='brush-size' value={brushSize} type='range' min='1' max='60' onChange={getSliderValue} /> 
-            </label>
+           
         </div>
     )
 }
