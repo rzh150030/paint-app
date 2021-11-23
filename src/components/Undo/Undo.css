@@ -1,0 +1,9 @@
+.undo{
+    font-size: 1.5em;
+    margin-left: 8px;
+}
+
+.undo:hover{
+    cursor: pointer;
+    color: rgb(2, 141, 255);
+}
